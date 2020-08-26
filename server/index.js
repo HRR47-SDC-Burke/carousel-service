@@ -27,6 +27,7 @@ app.get('/api/images/:id', (req, res) => {
   });
 });
 
+// POST adds images with a new location_id
 app.post('/api/images/', (req, res) => {
   db.query('SELECT MAX(location_id) FROM images', (err, data) => {
     if (err) {
@@ -40,6 +41,7 @@ app.post('/api/images/', (req, res) => {
   });
 });
 
+// PUT adds extra images with the given location_id
 app.put('/api/images/:id', (req, res) => {
   db.query(`SELECT COUNT(IF(location_id = ${req.params.id}, 1, NULL)) FROM images`, (err, data) => {
     if (err) {
@@ -53,6 +55,7 @@ app.put('/api/images/:id', (req, res) => {
   });
 });
 
+// DELETE removes all images with the given location_id
 app.delete('/api/images/:id', (req, res) => {
   db.query(`DELETE FROM images WHERE location_id = ${req.params.id}`, (err) => {
     if (err) {
