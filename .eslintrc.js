@@ -6,7 +6,10 @@
  */
 
 module.exports = {
-  extends: 'airbnb'
+  extends: 'airbnb',
+  rules: {
+    'linebreak-style': 0
+  }
 };
 
 //./node_modules/eslint-config-hackreactor/index.js
