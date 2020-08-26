@@ -78,3 +78,32 @@ Testing is implemented with Jest and Enzyme. Should you update the components in
 npm test -- -u
 ```
 
+### CRUD Routes
+
+GET:
+
+```sh
+/api/images/:id
+```
+> Gets the images corresponding to a given ID.
+
+POST:
+
+```sh
+/api/images
+```
+> Creates a new listing ID and assigns it new images.
+
+PUT:
+
+```sh
+/api/images/:id
+```
+> Adds more images to the given ID.
+
+DELETE:
+
+```sh
+/api/images/:id
+```
+> Deletes all images assigned to the given ID.
