@@ -47,7 +47,6 @@ app.put('/api/images/:id', (req, res) => {
     if (err) {
       res.send('An error occurred');
     } else {
-      console.log(data[0][`COUNT(IF(location_id = ${req.params.id}, 1, NULL))`]);
       seedOne(req.params.id, () => {
         res.send(`Extra images added to listing ${req.params.id}`);
       }, data[0][`COUNT(IF(location_id = ${req.params.id}, 1, NULL))`]);
