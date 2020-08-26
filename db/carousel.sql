@@ -2,6 +2,8 @@ CREATE DATABASE IF NOT EXISTS carousel;
 
 USE carousel;
 
+DROP TABLE IF EXISTS images;
+
 CREATE TABLE images (
   id INT NOT NULL AUTO_INCREMENT,
   url VARCHAR(255),

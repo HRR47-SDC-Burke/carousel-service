@@ -32,22 +32,35 @@ app.post('/api/images/', (req, res) => {
     if (err) {
       res.send('An error occurred');
     } else {
-      console.log(data[0]['MAX(location_id)']);
-      seedOne(data[0]['MAX(location_id)'] + 1, () => {
-        res.sendStatus(200);
+      const destination = data[0]['MAX(location_id)'] + 1;
+      seedOne(destination, () => {
+        res.send(`Created listing ${destination}`);
       });
     }
   });
 });
 
 app.put('/api/images/:id', (req, res) => {
-  const status = 'Updating item ' + req.params.id;
-  res.send(status);
+  db.query(`SELECT COUNT(IF(location_id = ${req.params.id}, 1, NULL)) FROM images`, (err, data) => {
+    if (err) {
+      res.send('An error occurred');
+    } else {
+      console.log(data[0][`COUNT(IF(location_id = ${req.params.id}, 1, NULL))`]);
+      seedOne(req.params.id, () => {
+        res.send(`Extra images added to listing ${req.params.id}`);
+      }, data[0][`COUNT(IF(location_id = ${req.params.id}, 1, NULL))`]);
+    }
+  });
 });
 
 app.delete('/api/images/:id', (req, res) => {
-  const status = 'Deleting item ' + req.params.id;
-  res.send(status);
+  db.query(`DELETE FROM images WHERE location_id = ${req.params.id}`, (err) => {
+    if (err) {
+      res.send('An error occurred');
+    } else {
+      res.send(`Deleted images from listing ${req.params.id}`);
+    }
+  });
 });
 
 const port = process.env.PORT || 3001;
