@@ -107,3 +107,12 @@ DELETE:
 /api/images/:id
 ```
 > Deletes all images assigned to the given ID.
+
+### Generating CSV Data
+
+To generate 10 million listings in CSV form:
+
+```sh
+npm run csvgen
+```
+You will find this data in a file called ```data.csv```.
