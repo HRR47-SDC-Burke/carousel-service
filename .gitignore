@@ -23,8 +23,12 @@ coverage
 # Compiled Dirs (http://nodejs.org/api/addons.html)
 build/
 
-#Files
+# Files
 client/dist/bundle.js
 db/config.js
 bundle.js
 config.js
+data.csv
+
+# Environment files
+.env
