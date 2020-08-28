@@ -2,6 +2,9 @@ const fs = require('fs');
 
 const MAXIMUM_COUNT = 10000000;
 
+let start;
+let seconds;
+
 const insert = (listingId, imageUrls) => new Promise((resolve, reject) => {
   const line = ''.concat(listingId, ',"', imageUrls.join(', '), '"\n');
   fs.appendFile('data.csv', line, (err, success) => {
@@ -13,7 +16,7 @@ const insert = (listingId, imageUrls) => new Promise((resolve, reject) => {
   });
 });
 
-const seed1000 = (iteration) => {
+const gen1000 = (iteration) => {
   const allPromises = [];
   let primary = 1;
   while (primary <= 1000) {
@@ -32,17 +35,21 @@ const seed1000 = (iteration) => {
         console.log(`${iteration} seeded!`);
       }
       if (iteration < MAXIMUM_COUNT) {
-        seed1000(iteration + 1000);
+        gen1000(iteration + 1000);
+      } else {
+        seconds = Math.floor((new Date().getTime() - start) / 1000);
+        console.log(`Done in ${seconds} seconds!`);
       }
     })
     .catch((err) => console.log(err));
 };
 
-const seed = () => {
+const gen = () => {
   fs.writeFile('data.csv', '', (err) => {
     if (err) throw err;
-    seed1000(0);
+    start = new Date().getTime();
+    gen1000(0);
   });
 };
 
-seed();
+gen();
