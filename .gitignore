@@ -28,6 +28,7 @@ client/dist/bundle.js
 db/config.js
 bundle.js
 config.js
+data.csv
 
 # Environment files
 .env

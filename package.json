@@ -10,7 +10,8 @@
   "scripts": {
     "start": "nodemon server/index.js",
     "seed": "node server/datagen.js",
-    "pgseed": "node server/postgresDatagen.js",
+    "csvgen": "node server/csvgen.js",
+    "pgseed": "node server/postgresSeed.js",
     "test": "jest",
     "build": "webpack -d --watch"
   },
@@ -31,6 +32,7 @@
     "eslint-plugin-react-hooks": "^4.0.8",
     "express": "^4.17.1",
     "file-loader": "^6.0.0",
+    "fs": "0.0.1-security",
     "identity-obj-proxy": "^3.0.0",
     "jest-sinon": "^1.0.4",
     "jquery": "^3.5.1",
