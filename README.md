@@ -115,4 +115,5 @@ To generate 10 million listings in CSV form:
 ```sh
 npm run csvgen
 ```
-You will find this data in a file called ```data.csv```.
+NOTE: This will not run unless you first make a directory called ```data.```
+CSV files will be written to that directory, 5000 at a time.
