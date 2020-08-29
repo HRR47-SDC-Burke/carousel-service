@@ -117,3 +117,11 @@ npm run csvgen
 ```
 NOTE: This will not run unless you first make a directory called ```data.```
 CSV files will be written to that directory, 5000 at a time.
+
+### Seeding CSV Data
+
+To seed the CSV files you made in Postgres:
+
+```sh
+npm run pgseed
+```
