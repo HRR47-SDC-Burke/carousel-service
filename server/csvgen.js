@@ -43,7 +43,7 @@ const gen5000 = (iteration = 5000, fileNumber = 1) => {
           console.log(`Done in ${seconds} seconds!`);
         }
       })
-      .catch((err) => console.log(err));
+      .catch((error) => console.log(error));
   });
 };
 
