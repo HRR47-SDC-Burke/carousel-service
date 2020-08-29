@@ -40,9 +40,9 @@ const parseFile = (filenames, maximum, index = 0) => {
           }
           parseFile(filenames, maximum, index + 1);
         } else {
+          seconds = Math.floor((new Date().getTime() - start) / 1000);
           pool.query('SELECT COUNT(*) FROM listings', (err2, countData) => {
             if (err2) throw err2;
-            seconds = Math.floor((new Date().getTime() - start) / 1000);
             console.log('Seeded', countData.rows[0].count, 'rows in', seconds, 'seconds!');
             pool.end();
           });
