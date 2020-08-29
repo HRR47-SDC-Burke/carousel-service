@@ -16,7 +16,7 @@ const insert = (listingId, imageUrls, fileNumber) => new Promise((resolve, rejec
   });
 });
 
-const gen5000 = (iteration = 5000, fileNumber = 1) => {
+const gen5000 = (iteration = 0, fileNumber = 1) => {
   fs.writeFile(`data/${fileNumber}.csv`, '', (err) => {
     if (err) throw err;
     const allPromises = [];
