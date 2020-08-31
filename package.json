@@ -12,6 +12,7 @@
     "seed": "node server/datagen.js",
     "csvgen": "node server/csvgen.js",
     "pgseed": "node server/postgresSeed.js",
+    "csseed": "node server/cassandraSeed.js",
     "test": "jest",
     "build": "webpack -d --watch"
   },
@@ -19,6 +20,7 @@
     "autoprefixer": "^9.8.6",
     "axios": "^0.19.2",
     "bluebird": "^3.7.2",
+    "cassandra-driver": "^4.6.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "enzyme": "^3.11.0",
