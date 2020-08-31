@@ -47,7 +47,7 @@ const gen5000 = (iteration = 0) => {
 };
 
 const gen = () => {
-  fs.writeFile('data.csv', '', (err, res) => {
+  fs.writeFile('data.csv', '', (err) => {
     if (err) throw err;
     start = new Date().getTime();
     gen5000();
