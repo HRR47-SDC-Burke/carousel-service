@@ -30,6 +30,7 @@ bundle.js
 config.js
 data/
 data.csv
+newrelic.js
 
 # Environment files
 .env
