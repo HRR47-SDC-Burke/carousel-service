@@ -115,3 +115,17 @@ To generate 10 million listings in CSV form:
 ```sh
 npm run csvgen
 ```
+
+### Artillery Testing
+
+To test GET requests in Artillery, while the server is running:
+
+```sh
+artillery run server/spec/artillery.get.yml
+```
+
+To test POST requests in Artillery, while the server is running:
+
+```sh
+artillery run server/spec/artillery.post.yml
+```
