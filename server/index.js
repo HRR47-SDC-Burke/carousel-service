@@ -37,6 +37,7 @@ app.get('/api/images/:id', (req, res) => {
 
 // POST adds images with a new location_id
 app.post('/api/images/', (req, res) => {
+  newrelic.setTransactionName('post');
   const totalImages = Math.floor(Math.random() * (25)) + 5;
   const imageUrls = [];
   for (let i = 1; i < totalImages; i += 1) {

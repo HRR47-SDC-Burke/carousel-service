@@ -118,6 +118,12 @@ npm run csvgen
 
 ### Artillery Testing
 
+Before testing Artillery, make sure you've installed it globally:
+
+```sh
+npm install -g artillery
+```
+
 To test GET requests in Artillery, while the server is running:
 
 ```sh
