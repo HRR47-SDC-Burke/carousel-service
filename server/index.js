@@ -3,7 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const cors = require('cors');
-const client = require('../db/postgres.index.js');
+const client = require('../db/index.js');
 
 const app = express();
 
