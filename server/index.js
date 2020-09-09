@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 app.get('/api/images/:id', (req, res) => {
   client.query('SELECT * FROM listings WHERE listing_id = $1', [req.params.id], (err, data) => {
     if (err) {
-      res.send(err);
+      res.send('An error occurred');
     } else {
       newrelic.setTransactionName('get');
       const locationId = data.rows[0].listing_id;
