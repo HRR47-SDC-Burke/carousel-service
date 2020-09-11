@@ -31,7 +31,7 @@ const Lightbox = ({
       <div className={lightbox.carouselContainer}>
         <div className={lightbox.carousel}>
           <PrevArrow prev={prev} selected={selected} />
-          {images.map((image) => <img className={selected === image.img_order ? lightbox.image : lightbox.imageOff} src={image.url} alt="" key={image.id} />)}
+          {images.map((image, i) => <img key={i} className={selected === image.img_order ? lightbox.image : lightbox.imageOff} src={image.url} alt="" key={image.id} />)}
           <NextArrow next={next} selected={selected} length={images.length} />
         </div>
       </div>
