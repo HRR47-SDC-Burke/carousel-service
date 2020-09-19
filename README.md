@@ -4,9 +4,9 @@ The image gallery of a webapp for users to post listings of places to stay for v
 
 ## Related Projects
 
-  - https://github.com/hrr47-SDC-Burke/booking-service
-  - https://github.com/hrr47-SDC-Burke/reviews-service
-  - https://github.com/hrr47-SDC-Burke/moreplacestostay-service
+  - https://github.com/HRR47-SDC-Burke/booking-service
+  - https://github.com/HRR47-SDC-Burke/reviews-service
+  - https://github.com/HRR47-SDC-Burke/moreplacestostay-service
 
 ## Table of Contents
 
