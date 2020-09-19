@@ -1,12 +1,12 @@
-# Project Name
+# Vacation Now
 
-Image Gallery and Lightbox for AirBnB Clone
+The image gallery of a webapp for users to post listings of places to stay for vacation.
 
 ## Related Projects
 
-  - https://github.com/hrr47-fec8-webber/booking-service
-  - https://github.com/hrr47-fec8-webber/reviews-service
-  - https://github.com/hrr47-fec8-webber/moreplacestostay-service
+  - https://github.com/hrr47-SDC-Burke/booking-service
+  - https://github.com/hrr47-SDC-Burke/reviews-service
+  - https://github.com/hrr47-SDC-Burke/moreplacestostay-service
 
 ## Table of Contents
 
@@ -16,7 +16,7 @@ Image Gallery and Lightbox for AirBnB Clone
 
 ## Usage
 
-This module builds a simple interactive photo gallery for an AirBnB clone. It takes a numeric location ID from the URL and fetches images associated with that location.
+This module builds a simple interactive photo gallery. It takes a numeric location ID from the URL and fetches images associated with that location.
 
 ## Requirements
 
